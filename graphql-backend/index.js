@@ -1,5 +1,5 @@
-const { ApolloServer, gql } = require('apollo-server')
-const { ApolloServerPluginLandingPageLocalDefault } = require('apollo-server-core')
+const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServerPluginLandingPageLocalDefault } = require('apollo-server-core');
 
 const typeDefs = gql`
   type Song {
@@ -25,13 +25,13 @@ const songs = [
     title: 'Ass like that',
     author: 'Eminem'
   }
-]
+];
 
 const resolvers = {
   Query: {
     songs: () => songs,
   },
-}
+};
 
 const server = new ApolloServer({
   typeDefs,
@@ -42,8 +42,8 @@ const server = new ApolloServer({
   plugins: [
     ApolloServerPluginLandingPageLocalDefault({ embed: true }),
   ],
-})
+});
 
 server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`)
-})
+  console.log(`🚀  Server ready at ${url}`);
+});

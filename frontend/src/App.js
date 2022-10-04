@@ -1,7 +1,7 @@
 import React from 'react';
-import 'antd/dist/antd.min.css'
+import 'antd/dist/antd.min.css';
 import { Layout } from 'antd';
-import { useQuery, gql } from '@apollo/client'
+import { useQuery, gql } from '@apollo/client';
 
 const { Header, Content } = Layout;
 
@@ -42,4 +42,4 @@ export default function App() {
       </Layout>
     </div>
   )
-}
+};
